@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website Design</title>
+
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!--custom css-->
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+
+    <!--header design-->
+    <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <i class='bx bx-menu' id="menu-icon"></i>
+    
+    <nav class="navbar">
+        <a href="#home" class="active">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#skill">SKILLS</a>
+        <a href="#internship">INTERNSHIP</a>
+        <a href="#portfolio">PROJECTS</a>
+        <a href="#contact">CONTACT ME</a>
+        
+    </nav>
+    </header>
+
+    <!--home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Devadharshini</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Turning Ideas into Reality with Modern Technology.
+            Crafting High-Performance Applications for a Smarter Future.</p></b>
+                <div class="social-media">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+                <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="image/home.png" alt="">
+        </div>
+    </section>
+
+    <!--about section design-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="image/home 1.png" alt="">
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">ABOUT  <span>Me</span></h2>
+        <h3>Frontend Developer!</h3>
+        <p>Hi, I'm Devadharshini R, a passionate Frontend Developer, Full Stack Developer and Software Engineer with a strong foundation in Java, Spring Boot, React. 
+        I specialize in designing and developing scalable web applications, integrating APIs, and optimizing system performance.
+        With a Bachelor’s degree in Information Technology, I have built projects that showcase my expertise in front-end and back-end development, as well as my problem-solving abilities. 
+        I have also gained hands-on experience in testing, automation, Agile methodologies through various certifications and virtual internships.Beyond coding, I enjoy exploring new technologies, 
+        collaborating on innovative projects, and continuously improving my skills.
+        Whether it’s crafting efficient software solutions or troubleshooting complex issues, I am always eager to take on new challenges.
+
+    </p>
+    <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+
+      <section class="skill" id="skill">
+        <h2 class="heading">MY <span>SKILLS</span></h2>
+
+        <div class="service-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Frontend Development</h3>
+                <p>"I have expertise in building responsive and visually appealing user interfaces using HTML, CSS, JavaScript, React, and Bootstrap.
+                    I focus on creating seamless user experiences, ensuring cross-browser compatibility and performance optimization.
+                    My skills also include state management, API integration, and modern UI/UX principles to enhance interactivity and usability."
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxl-java'></i>
+                <h3>Java Developer</h3>
+                <p>"I have a strong foundation in Java programming, specializing in Spring Boot, RESTful APIs, and backend development.
+                    I am proficient in database management (MySQL, PostgreSQL), multithreading, and object-oriented programming (OOP), ensuring efficient and scalable solutions.
+                    My experience includes building and optimizing enterprise applications, implementing security best practices, and working with microservices architecture."
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-desktop'></i>
+                <i class='Fullstack Development'></i>
+                <h3>Web Development</h3>
+                <p>"As a Full Stack Developer, I have expertise in both front-end and back-end technologies, including React, Java, Spring Boot, MySQL, and API development.
+                    I develop scalable web applications, ensuring smooth database interactions, server-side logic, and a responsive user interface.
+                    With a strong understanding of cloud deployment, version control (Git/GitHub), and Agile methodologies, I create end-to-end solutions that are efficient and maintainable."
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+      </section>
+      <section class="internship" id="internship">
+        <h2 class="heading">MY <span>INTERNSHIPS</span></h2>
+    
+        <!-- Filter Dropdown -->
+        <div class="filter-container">
+            <label for="filter">Filter by Company:</label>
+            <select id="filter" onchange="filterCertificates()">
+                <option value="all">All</option>
+                <option value="walmart">Walmart</option>
+                <option value="accenture">Accenture</option>
+                <option value="elite">ELiteTech</option>
+                <option value="deloitte">Deloitte</option>
+            </select>
+        </div>
+    
+        <div class="internship-container">
+            <div class="internship-box" data-company="walmart">
+                <h3>Advanced Software Engineering Internship</h3>
+                <p>Walmart | March 2024</p>
+                <button class="show-certificate-btn" onclick="showCertificate('walmart')">View Certificate</button>
+                <img id="walmart-certificate" src="certificates/walmart_certificate.jpg" class="certificate hidden">
+            </div>
+    
+            <div class="internship-box" data-company="accenture">
+                <h3>Project Management Internship</h3>
+                <p>Accenture | March 2024</p>
+                <button class="show-certificate-btn" onclick="showCertificate('accenture')">View Certificate</button>
+                <img id="accenture-certificate" src="certificates/accenture_certificate.jpg" class="certificate hidden">
+            </div>
+    
+            <div class="internship-box" data-company="elite">
+                <h3>Software Development Internship</h3>
+                <p>ELiteTech | October 2024</p>
+                <button class="show-certificate-btn" onclick="showCertificate('elite')">View Certificate</button>
+                <img id="elite-certificate" src="certificates/elite_tech_certificate.jpg" class="certificate hidden">
+            </div>
+    
+            <div class="internship-box" data-company="deloitte">
+                <h3>Software Development Internship</h3>
+                <p>Deloitte | October 2024</p>
+                <button class="show-certificate-btn" onclick="showCertificate('deloitte')">View Certificate</button>
+                <img id="deloitte-certificate" src="certificates/deloitte_certificate.jpg" class="certificate hidden">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section Design -->
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Project</span></h2>
+    
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="image/Text -speech.png" alt="Text to Speech">
+            <div class="portfolio-layer">
+                <h4>Frontend Development</h4>
+                <p>Built an AI-powered speech synthesis tool enabling seamless text-to-audio conversion.</p>
+                <a href="https://github.com/Devadharshini1611/text-speech-covertor" target="_blank">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="image/Temperature converter.png" alt="Temperature Converter">
+            <div class="portfolio-layer">
+                <h4>Web Development</h4>
+                <p>A temperature converter tool that converts between Celsius, Fahrenheit, and Kelvin.</p>
+                <a href="https://github.com/Devadharshini1611/Temperature--Convertor" target="_blank">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="image/Dictionary.png" alt="Dictionary">
+            <div class="portfolio-layer">
+                <h4>Web Development</h4>
+                <p>Developed an online dictionary with word definitions, synonyms, and pronunciation.</p>
+                <a href="https://github.com/Deva-16400/Dictionary-App" target="_blank">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="image/Contact-Management.png" alt="Contact Management">
+            <div class="portfolio-layer">
+                <h4>Web Development</h4>
+                <p>A contact management system with CRUD operations and a modern UI.</p>
+                <a href="https://github.com/Devadharshini1611/contact-manage" target="_blank">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="image/qrcodegenerator.png" alt="QR Code Generator">
+            <div class="portfolio-layer">
+                <h4>Web Development</h4>
+                <p>Built a QR Code generator that allows users to generate QR codes for text and URLs.</p>
+                <a href="https://github.com/Deva-16400/QR-Code-Generator" target="_blank">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+    
+
+        </div>
+    </section>
+
+    <!--contact section design-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+    
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="mobile" placeholder="Mobile Number" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+            <p id="form-status"></p> <!-- Status message here -->
+        </form>
+    </section>
+    
+
+    <!--footer design-->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright & copy; 2023 by Devadharshini | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+     <!-- scroll reveal -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--typed js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+
+    <!--custom js-->
+    <script src="script.js"></script>
+</body>
+</html>
